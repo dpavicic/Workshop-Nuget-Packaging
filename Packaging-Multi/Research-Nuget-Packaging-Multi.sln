@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UtilityLibrary", "src\UtilityLibrary\UtilityLibrary.csproj", "{FD0FA332-4866-4824-9BAC-1E94F0D74AE6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainLibrary", "src\MainLibrary\MainLibrary.csproj", "{805B6DE8-6382-4538-A1E1-C4BCAC4AD679}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FD0FA332-4866-4824-9BAC-1E94F0D74AE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD0FA332-4866-4824-9BAC-1E94F0D74AE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD0FA332-4866-4824-9BAC-1E94F0D74AE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD0FA332-4866-4824-9BAC-1E94F0D74AE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{805B6DE8-6382-4538-A1E1-C4BCAC4AD679}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{805B6DE8-6382-4538-A1E1-C4BCAC4AD679}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{805B6DE8-6382-4538-A1E1-C4BCAC4AD679}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{805B6DE8-6382-4538-A1E1-C4BCAC4AD679}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+	EndGlobalSection
+EndGlobal

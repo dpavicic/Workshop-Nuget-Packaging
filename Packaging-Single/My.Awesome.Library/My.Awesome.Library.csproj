@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+
+        <!-- NUGET PACKAGE INFO-->
+        <Title>Example Library for NuGet Packaging</Title>
+        <Version>1.0.0</Version>
+        <Authors>Dinko Pavicic</Authors>
+        <Description>Example NuGet package</Description>
+        <Copyright>Copyright (c) Dinko Pavicic 2024</Copyright>
+        <PackageProjectUrl>https://dinkopavicic.com</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/dpavicic/Research-Nuget-Packaging/tree/master/src/Packaging-Single</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageTags>nuget, packaging, example</PackageTags>
+        <PackageReleaseNotes>Version 1.0.0: First version of example library for NuGet packaging.</PackageReleaseNotes>
+        <PackageIcon>package_icon.png</PackageIcon>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="README.md" Pack="true" PackagePath="\"/>
+        <None Include="images\package_icon.png" Pack="true" PackagePath="\"/>
+    </ItemGroup>
+
+    <!--
+    Starting in the .NET 8 SDK, PackRelease defaults to true. For more information, see 'dotnet pack' uses 
+    Release configuration.
+    .NET 7 SDK only: To use PackRelease in a project that's part of a Visual Studio solution, you must set the environment variable 
+    DOTNET_CLI_ENABLE_PACK_RELEASE_FOR_SOLUTIONS to true (or any other value). For solutions that have many projects, 
+    setting this variable increases the time required to pack.
+    -->
+    <PropertyGroup>
+        <PackRelease>true</PackRelease>
+    </PropertyGroup>
+
+</Project>
