@@ -6,11 +6,16 @@
         <title>Multi Package with Nuspec</title>
         <authors>Dinko Pavicic</authors>
         <owners>Dinko Pavicic</owners>
-        <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>An example NuGet package demonstrating bundling mulitple projects into one package using Nuspec.</description>
-        <releaseNotes>1.0.0: Initial release</releaseNotes>
+        <description>An example NuGet package demonstrating bundling multiple projects into one package using Nuspec.</description>
         <readme>README.md</readme>
+        <copyright>Copyright (c) Dinko Pavicic 2024</copyright>
+        <license type="expression">MIT</license>
+        <projectUrl>https://dinkopavicic.com</projectUrl>
+        <releaseNotes>1.0.0: Initial release</releaseNotes>
         <icon>package_icon.png</icon>
+        <tags>nuget, packaging, example</tags>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <repository type="git" url="https://github.com/dpavicic/Research-Nuget-Packaging/tree/master/Packaging-Multi-Nuspec" />
         <dependencies>
             <group targetFramework="net7.0">
                 <!-- List dependencies here, if any -->
