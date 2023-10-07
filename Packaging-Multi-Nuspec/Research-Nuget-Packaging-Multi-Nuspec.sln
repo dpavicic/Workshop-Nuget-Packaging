@@ -1,8 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UtilityLibrary", "src\UtilityLibrary\UtilityLibrary.csproj", "{FD0FA332-4866-4824-9BAC-1E94F0D74AE6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "My.LibraryA", "src\My.LibraryA\My.LibraryA.csproj", "{FD0FA332-4866-4824-9BAC-1E94F0D74AE6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainLibrary", "src\MainLibrary\MainLibrary.csproj", "{805B6DE8-6382-4538-A1E1-C4BCAC4AD679}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "My.LibraryB", "src\My.LibraryB\My.LibraryB.csproj", "{805B6DE8-6382-4538-A1E1-C4BCAC4AD679}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
