@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <RootNamespace>Packaging.Generators.Sample</RootNamespace>
+        <OutputType>Exe</OutputType>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <!-- 
+        Add a reference to the generator project. 
+        Must set: ReferenceOutputAssembly="false" OutputItemType="Analyzer" to recognize it as anaylizer/generator
+        -->
+        <ProjectReference Include="..\Packaging.Generators\Packaging.Generators.csproj" ReferenceOutputAssembly="false" OutputItemType="Analyzer" />
+    </ItemGroup>
+
+</Project>
