@@ -17,7 +17,7 @@ internal class Program
 			{
 				if (o is { Iterations: > 0 })
 				{
-					Console.WriteLine($"Fibonacci number for {o.Iterations} iterations is {CalculateFibonacci(o.Iterations)}");
+					Console.WriteLine($"The Fibonacci number for {o.Iterations} iterations is {CalculateFibonacci(o.Iterations)}");
 				}
 			});
 	}

@@ -29,15 +29,15 @@
         <PackAsTool>true</PackAsTool>
         
         <!-- 
-            Optional element that specifies the command that will invoke the tool after it's installed. 
-            If this element isn't provided, the command name for the tool is the assembly name, which 
-            is typically the project file name without the .csproj extension. 
+            The <ToolCommandName> property is an optional component that allows you to specify the command 
+            that will be used to invoke the tool after it has been installed.
+            If this element is not provided, the default command name for the tool will be the assembly name. 
+            The assembly name is typically the project file name without the .csproj extension. 
          -->
         <ToolCommandName>fibonacci</ToolCommandName>
         
         <!--
-            Optional element that determines where the NuGet package will be produced. 
-            The NuGet package is what the .NET CLI uses to install your tool.
+            An Optional element that determines where the NuGet package will be produced.
         -->
         <PackageOutputPath>./nupkg</PackageOutputPath>
     </PropertyGroup>
