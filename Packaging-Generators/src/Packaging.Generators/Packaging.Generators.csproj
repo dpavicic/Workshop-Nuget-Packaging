@@ -1,0 +1,90 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>        
+        <Nullable>enable</Nullable>
+        <LangVersion>latest</LangVersion>
+
+        <!-- SOURCE GENERATOR IMPORTANT SETTINGS -->
+        <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
+        <EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>        
+        <IsRoslynComponent>true</IsRoslynComponent>
+
+        <RootNamespace>Packaging.Generators</RootNamespace>
+
+        <!-- NUGET PACKAGE SETTINGS -->
+        <IsPackable>true</IsPackable>
+        <PackageId>Packaging.Generators</PackageId>
+        <Title>Example Library for NuGet Packaging</Title>
+        <Version>1.0.0</Version>
+        <Authors>Dinko Pavicic</Authors>
+        <Description>Example NuGet package</Description>
+        <Copyright>Copyright (c) Dinko Pavicic 2024</Copyright>
+        <PackageProjectUrl>https://dinkopavicic.com</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/dpavicic/Research-Nuget-Packaging/tree/master/Packaging-Single</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageTags>nuget, packaging, generator, example</PackageTags>
+        <PackageReleaseNotes>Version 1.0.0: First version of example library for NuGet packaging with source generator and Scriban.</PackageReleaseNotes>
+        <PackageIcon>package_icon.png</PackageIcon>
+
+        <!-- 
+        👇 SCRIBAN
+        Starting with Scriban 3.2.1+, the package comes with source included so that you can internalize your 
+        usage of Scriban into your project. This can be useful in an environment where you can't easily consume 
+        NuGet references (e.g Roslyn Source Generators).
+        see: https://github.com/scriban/scriban#source-embedding
+        -->
+        <PackageScribanIncludeSource>true</PackageScribanIncludeSource>
+    </PropertyGroup>
+
+    <!-- Include package assets -->
+    <ItemGroup>
+        <None Include="README.md" Pack="true" PackagePath="\"/>
+        <None Include="images\package_icon.png" Pack="true" PackagePath="\"/>
+    </ItemGroup>
+
+    <!-- This ensures the library will be packaged as a source generator when we use `dotnet pack` -->
+    <ItemGroup>
+        <None Include="$(OutputPath)\$(AssemblyName).dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
+    </ItemGroup>
+
+    <!--
+     Use these references for the generator instead of Rider's defaults.
+     Rider's defaults produce errors when packaging as Nuget. 
+     -->
+    <ItemGroup>
+        <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.8.0-2.final" PrivateAssets="all" />
+        <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.11.0-beta1.23420.2" PrivateAssets="all" />
+    </ItemGroup>
+
+    <!-- 
+        This is Rider defaults. Unfortunately this produces errors when packaging as Nuget.
+        It seems that problem lies with Microsoft.CodeAnalysis.CSharp.Workspaces
+    -->
+    <!--
+    <ItemGroup>
+        <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.11.0-beta1.23364.2">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.7.0" />
+        <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="4.7.0" />
+    </ItemGroup>
+    -->
+
+    <!-- SCRIBAN RELATED -->
+    <ItemGroup>
+        <PackageReference Include="Scriban" Version="5.9.0" IncludeAssets="Build" />
+        <PackageReference Include="Microsoft.CSharp" Version="4.7.0"/>
+        <PackageReference Include="System.Threading.Tasks.Extensions" Version="4.5.4"/>
+    </ItemGroup>
+    
+    <ItemGroup>      
+      <EmbeddedResource Include="Templates\HelloThereClass.tpl" />
+      <EmbeddedResource Include="Templates\HelloThereAttr.tpl" />
+    </ItemGroup>
+
+
+</Project>

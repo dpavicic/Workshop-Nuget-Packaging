@@ -5,7 +5,9 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
 
-        <!-- NUGET PACKAGE INFO-->
+        <!-- NUGET PACKAGE SETTINGS -->
+        <IsPackable>true</IsPackable>
+        <PackageId>My.Awesome.Library</PackageId>
         <Title>Example Library for NuGet Packaging</Title>
         <Version>1.0.0</Version>
         <Authors>Dinko Pavicic</Authors>
