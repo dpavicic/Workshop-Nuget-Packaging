@@ -1,0 +1,55 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+
+        <!-- NUGET PACKAGE SETTINGS -->
+        <IsPackable>true</IsPackable>
+        <PackageId>Packaging.Tools</PackageId>
+        <Title>Example Library for NuGet Packaging of dotnet tools.</Title>
+        <Version>1.0.0</Version>
+        <Authors>Dinko Pavicic</Authors>
+        <Description>Example NuGet package for NuGet packaging dotnet tool projects.</Description>
+        <Copyright>Copyright (c) Dinko Pavicic 2024</Copyright>
+        <PackageProjectUrl>https://dinkopavicic.com</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/dpavicic/Research-Nuget-Packaging/tree/master/Packaging-Generators</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageTags>nuget, packaging, tool, example</PackageTags>
+        <PackageReleaseNotes>Version 1.0.0: First version of example library for NuGet packaging dotnet tools.</PackageReleaseNotes>
+        <PackageIcon>package_icon.png</PackageIcon>
+        
+        <!-- IMPORTANT PART FOR TOOL PACKAGING -->
+        
+        <!-- Set as tool -->
+        <PackAsTool>true</PackAsTool>
+        
+        <!-- 
+            Optional element that specifies the command that will invoke the tool after it's installed. 
+            If this element isn't provided, the command name for the tool is the assembly name, which 
+            is typically the project file name without the .csproj extension. 
+         -->
+        <ToolCommandName>fibonacci</ToolCommandName>
+        
+        <!--
+            Optional element that determines where the NuGet package will be produced. 
+            The NuGet package is what the .NET CLI uses to install your tool.
+        -->
+        <PackageOutputPath>./nupkg</PackageOutputPath>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="CommandLineParser" Version="2.8.0" />
+    </ItemGroup>
+
+    <!-- Include package assets -->
+    <ItemGroup>
+        <None Include="README.md" Pack="true" PackagePath="\"/>
+        <None Include="images\package_icon.png" Pack="true" PackagePath="\"/>
+    </ItemGroup>
+
+</Project>
