@@ -30,24 +30,24 @@
         <PackageIcon>package_icon.png</PackageIcon>
 
         <!-- 
-        👇 SCRIBAN
-        Starting with Scriban 3.2.1+, the package comes with source included so that you can internalize your 
+        👇 SCRIBAN RELATED
+        Starting with Scriban 3.2.1+, the package includes a source so you can internalize your 
         usage of Scriban into your project. This can be useful in an environment where you can't easily consume 
-        NuGet references (e.g Roslyn Source Generators).
+        NuGet references (e.g., Roslyn Source Generators).
         see: https://github.com/scriban/scriban#source-embedding
         -->
         <PackageScribanIncludeSource>true</PackageScribanIncludeSource>
     </PropertyGroup>
 
+    <!-- This ensures the library will be packaged as a source generator when we use `dotnet pack` -->
+    <ItemGroup>
+        <None Include="$(OutputPath)\$(AssemblyName).dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
+    </ItemGroup>
+
     <!-- Include package assets -->
     <ItemGroup>
         <None Include="README.md" Pack="true" PackagePath="\"/>
         <None Include="images\package_icon.png" Pack="true" PackagePath="\"/>
-    </ItemGroup>
-
-    <!-- This ensures the library will be packaged as a source generator when we use `dotnet pack` -->
-    <ItemGroup>
-        <None Include="$(OutputPath)\$(AssemblyName).dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
     </ItemGroup>
 
     <!--
@@ -58,10 +58,14 @@
         <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.8.0-2.final" PrivateAssets="all" />
         <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.11.0-beta1.23420.2" PrivateAssets="all" />
     </ItemGroup>
-
+    
     <!-- 
-        This is Rider defaults. Unfortunately this produces errors when packaging as Nuget.
-        It seems that problem lies with Microsoft.CodeAnalysis.CSharp.Workspaces
+        This (below) is Rider defaults. Unfortunately, this produces errors when packaging as Nuget.
+        It seems that the problem lies with Microsoft.CodeAnalysis.CSharp.Workspaces.
+        
+        warning RS1038: This compiler extension should not be implemented in an assembly containing a reference to Mi
+        crosoft.CodeAnalysis.Workspaces. The Microsoft.CodeAnalysis.Workspaces assembly is not provided during command line com
+        pilation scenarios, so references to it could cause the compiler extension to behave unpredictably.
     -->
     <!--
     <ItemGroup>
