@@ -7,6 +7,8 @@
         <LangVersion>default</LangVersion>
 
         <!-- NUGET PROPS -->
+        <IsPackable>true</IsPackable>
+        <PackageId>My.Library.B</PackageId>
         <Title>My Library B</Title>
         <Authors>Dinko Pavicic</Authors>
         <Description>Simple Vector2D math functions</Description>

@@ -7,6 +7,8 @@
         <LangVersion>default</LangVersion>
         
         <!-- NUGET PROPS -->
+        <IsPackable>true</IsPackable>
+        <PackageId>My.Library.A</PackageId>
         <Title>My Library A</Title>
         <Authors>Dinko Pavicic</Authors>
         <Description>Simple math functions like Fibonacci etc.</Description>
