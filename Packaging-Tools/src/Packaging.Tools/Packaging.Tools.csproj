@@ -15,7 +15,7 @@
         <Description>Example NuGet package for NuGet packaging dotnet tool projects.</Description>
         <Copyright>Copyright (c) Dinko Pavicic 2024</Copyright>
         <PackageProjectUrl>https://dinkopavicic.com</PackageProjectUrl>
-        <RepositoryUrl>https://github.com/dpavicic/Research-Nuget-Packaging/tree/master/Packaging-Generators</RepositoryUrl>
+        <RepositoryUrl>https://github.com/dpavicic/Research-Nuget-Packaging/tree/master/Packaging-Tools</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
