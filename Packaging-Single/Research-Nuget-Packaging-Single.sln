@@ -10,6 +10,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Packaging-Single", "Packagi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "My.Awesome.Library", "My.Awesome.Library\My.Awesome.Library.csproj", "{7DC70BDC-1001-4617-B4F3-DDD6393EB813}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "My.Awesome.Library.Tests", "My.Awesome.Library.Tests\My.Awesome.Library.Tests.csproj", "{97DB37E5-A11E-4917-9A42-8A5E23BC21B8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,8 +22,13 @@ Global
 		{7DC70BDC-1001-4617-B4F3-DDD6393EB813}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7DC70BDC-1001-4617-B4F3-DDD6393EB813}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7DC70BDC-1001-4617-B4F3-DDD6393EB813}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97DB37E5-A11E-4917-9A42-8A5E23BC21B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97DB37E5-A11E-4917-9A42-8A5E23BC21B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97DB37E5-A11E-4917-9A42-8A5E23BC21B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97DB37E5-A11E-4917-9A42-8A5E23BC21B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{7DC70BDC-1001-4617-B4F3-DDD6393EB813} = {240C7647-0172-4AE6-977B-5E3FDBF2ED7A}
+		{97DB37E5-A11E-4917-9A42-8A5E23BC21B8} = {240C7647-0172-4AE6-977B-5E3FDBF2ED7A}
 	EndGlobalSection
 EndGlobal

@@ -5,7 +5,9 @@
 # Navigate to project directory
 cd ./My.Awesome.Library
 
-# Build NuGet to local directory
+# Build, Test and Package NuGet to local directory
+dotnet build --configuration Release
+dotnet test --configuration Release
 dotnet pack --output nupkgs -c Release
 
 # Wait for user input before exiting

@@ -1,5 +1,11 @@
 ﻿namespace My.Awesome.Library;
 
+/// <summary>
+/// Fibonacci class.
+/// </summary>
+/// <remarks>
+/// A simple class that calculates the nth Fibonacci number.
+/// </remarks>
 public class Fibonacci
 {
 	/// <summary>

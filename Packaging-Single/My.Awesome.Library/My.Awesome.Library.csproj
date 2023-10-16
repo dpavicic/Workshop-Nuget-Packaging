@@ -8,8 +8,8 @@
         <!-- NUGET PACKAGE SETTINGS -->
         <IsPackable>true</IsPackable>
         <PackageId>My.Awesome.Library</PackageId>
+        <Version>1.0.0</Version>        
         <Title>Example Library for NuGet Packaging</Title>
-        <Version>1.0.0</Version>
         <Authors>Dinko Pavicic</Authors>
         <Description>Example NuGet package</Description>
         <Copyright>Copyright (c) Dinko Pavicic 2024</Copyright>
@@ -21,12 +21,46 @@
         <PackageTags>nuget, packaging, example</PackageTags>
         <PackageReleaseNotes>Version 1.0.0: First version of example library for NuGet packaging.</PackageReleaseNotes>
         <PackageIcon>package_icon.png</PackageIcon>
+
+        <!-- 
+            Enable Validation 
+            https://learn.microsoft.com/en-us/dotnet/fundamentals/package-validation/overview
+        -->
+        <EnablePackageValidation>true</EnablePackageValidation>
+        
+        <!-- 
+            Uncomment to validate against some previous package (API changes) 
+            https://docs.microsoft.com/en-us/nuget/reference/msbuild-targets#packagevalidationbaselineversion
+        <PackageValidationBaselineVersion>1.0.0</PackageValidationBaselineVersion>
+        -->
+
+        <!-- 
+            XML Documentation
+            Also turn off warnings for missing documentation 
+        -->
+        <GenerateDocumentationFile>True</GenerateDocumentationFile>
+        <DocumentationFile>bin\Release\My.Awesome.Library.xml</DocumentationFile>
+        <NoWarn>$(NoWarn);CS1591</NoWarn>
+        
     </PropertyGroup>
 
+    <!--
+        Enable reproducible builds
+        https://github.com/dotnet/reproducible-builds  
+        https://devblogs.microsoft.com/dotnet/producing-packages-with-source-link/
+    -->
+    <ItemGroup>
+        <PackageReference Include="DotNet.ReproducibleBuilds" Version="1.1.1">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+    </ItemGroup>
+    
     <ItemGroup>
         <None Include="README.md" Pack="true" PackagePath="\"/>
         <None Include="images\package_icon.png" Pack="true" PackagePath="\"/>
     </ItemGroup>
+
 
     <!--
     Starting in the .NET 8 SDK, PackRelease defaults to true. For more information, see 'dotnet pack' uses 
@@ -37,6 +71,6 @@
     -->
     <PropertyGroup>
         <PackRelease>true</PackRelease>
-    </PropertyGroup>
+    </PropertyGroup>    
 
 </Project>
