@@ -1,10 +1,18 @@
-# Research-Nuget-Packaging
-Research projects related to Nuget packaging and distribution
+# Introduction
 
-## Introduction
-This article is the first in a series about packing your .NET projects into NuGet packages. While NuGet packaging may appear straightforward at first, delving into the documentation reveals undocumented and scattered information that can make the process time-consuming and frustrating.
-Throughout the series, I will try to cover and condense all the important parts into straightforward and simple articles. So, let's dive in...
+So, you have developed a command line tool, and now you want to distribute it in a way that is convenient for your end users. You also want to ensure the installation process is smooth, whether done manually or through an installation script in a CI/CD pipeline. Luckily, .NET provides a great solution for both of these challenges.
 
-## NuGet Packages
-NuGet packages are packaged .NET projects that have been prepared for distribution and reuse. They encapsulate code and other resources, making sharing and managing external dependencies within .NET projects easier. A NuGet package is essentially a ZIP archive with a .nupkg extension.
-Creating and publishing your own NuGet package is an excellent method for distributing and reusing your .NET libraries. Once built, you can release it to your personal or company's repository or even an official NuGet.org repository that benefits the entire .NET community.
+I've developed a basic CLI tool for this exercise that **computes the nth zero-based Fibonacci number**. The final outcome in the terminal will be a straightforward command `fibonacci` with the input argument `--iterations`, which takes the number of iterations to calculate.
+
+Once installed, one can open up the terminal and call it: `fibonacci --iterations 3` which would produce:
+
+```bash
+PS C:\Users\User> fibonacci --iterations 3
+The Fibonacci number for 3 iterations is 2
+```
+
+Said that, let's dive into producing such a tool...
+
+
+# More Articles
+If you enjoyed this articles, maybe you will enjoy more at [dinkopavicic.com](www.dinkopavicic.com)
