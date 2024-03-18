@@ -6,4 +6,4 @@ This article will walk you through a comprehensive guide on **how to package a R
 
 
 # More Articles
-If you enjoyed this articles, maybe you will enjoy more at (dinkopavicic.com)[www.dinkopavicic.com]
+If you enjoyed this articles, maybe you will enjoy more at [dinkopavicic.com](www.dinkopavicic.com)
