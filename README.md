@@ -1,5 +1,5 @@
 # Introduction to NuGet Packaging Series
-Welcome to the **[Introduction to NuGet Packaging Series](dinkopavicic.com/journal/the-series-nuget-packaging)!** In this series, we'll explore NuGet packaging in .NET and C#. You'll learn about its features, benefits, and how to use it in your projects effectively.
+Welcome to the **[Introduction to NuGet Packaging Series](dinkopavicic.com/journal/the-series-nuget-packaging)** In this series, we'll explore NuGet packaging in .NET and C#. You'll learn about its features, benefits, and how to use it in your projects effectively.
 
 Throughout the series, we'll cover various aspects of NuGet packaging, starting with creating your first package and progressing to more advanced topics. We'll discuss bundling multiple projects, working with source generators and Scriban templates, creating NuGet CLI tool packages, publishing your packages, and configuring multiple NuGet registries to enhance your development workflow.
 
@@ -35,4 +35,4 @@ While [NuGet.org](http://NuGet.org) is the default repository for NuGet packages
 [Article link](http://dinkopavicic.com/journal/nuget-multiple-and-custom-registries)
 
 ## More Articles
-If you enjoyed this articles, maybe you will enjoy more at (dinkopavicic.com)[www.dinkopavicic.com]
+If you enjoyed this articles, maybe you will enjoy more at [dinkopavicic.com](www.dinkopavicic.com)
